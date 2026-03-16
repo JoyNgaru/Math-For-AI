@@ -1,0 +1,16 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                # Swap
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                # Print the array after each swap
+                print(f"Swap at positions {j} and {j+1}: {arr}")
+    return arr
+
+# Example usage
+numbers = [15, 3, 8, 4, 2]
+print("Original array:", numbers)
+sorted_numbers = bubble_sort(numbers)
+print
